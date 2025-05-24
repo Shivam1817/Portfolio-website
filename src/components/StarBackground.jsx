@@ -5,15 +5,14 @@ import { useEffect, useState } from 'react';
 
 export const StarBackground = () => {
 
-    const [stars, setStars] = useState([])
-
-    const generateStars = () => {
-        const numberOfStars = Math.floor(window.innerWidth * window.innerHeight / 10000);
-    }
+    const [stars, setStars] = useState([]);
 
     useEffect(() => {
         generateStars();
     },[]);
+
+    const generateStars = () => {
+        const numberOfStars = Math.floor(window.innerWidth * window.innerHeight / 10000);
 
     const newStars = []
 
@@ -28,7 +27,8 @@ export const StarBackground = () => {
         })
     }
 
-    setStars(newStars);
+        setStars(newStars);
+    };
     return (
         <div className='fixed inset-0 overflow-hidden pointer-events-none z-0'>
             {stars.map((star) => (
