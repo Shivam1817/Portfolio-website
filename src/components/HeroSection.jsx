@@ -4,7 +4,7 @@ export const HeroSection = () => {
     return <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-4">
         <div className="container max-w-4xl mx-auto text-center z-10">
             <div className="space-y-6 flex flex-col items-center justify-center">
-                <img src="./src/assets/shivam.jpg" alt="Shivam's Avatar" className="w-36 h-36 md:w-48 md:h-48 rounded-full object-cover border-4 border-white shadow-lg" />
+                <img src="projects/shivam.jpg" alt="Shivam's Avatar" className="w-36 h-36 md:w-48 md:h-48 rounded-full object-cover border-4 border-white shadow-lg" />
                 <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                     <span className="opacity-0 animate-fade-in">Hi, I'm</span>
                     <span className="text-primary opacity-0 animate-fade-in-delay-1">{" "}Shivam</span>
