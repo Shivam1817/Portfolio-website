@@ -99,7 +99,7 @@ const projects = [
             <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/ranjannkumar"
+            href="https://github.com/shivam1817"
             >
                 Check My Github <ArrowRight size={16} />
             </a>
