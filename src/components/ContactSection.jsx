@@ -2,6 +2,7 @@ import { Instagram, Linkedin, Mail, MapPin, Phone, Send, Twitter } from "lucide-
 import { useToast } from '@/hooks/use-toast';
 import { useState, useRef } from "react";
 import { cn } from "../lib/utils";
+import emailjs from "@emailjs/browser";
 
 export const ContactSection = () => {
     const { toast } = useToast();
@@ -10,16 +11,29 @@ export const ContactSection = () => {
 
     const handleSubmit = (e) => {
     e.preventDefault();
-
     setIsSubmitting(true);
 
-    setTimeout(() => {
-        toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+    emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY     
+        )
+        .then(() => {
+            toast({
+            title: "Message sent!",
+            description: "Thank you for your message. I'll get back to you soon.",
+            });
+            formRef.current.reset();
+            setIsSubmitting(false);
+        })
+        .catch(() => {
+            toast({
+            title: "Error!",
+            description: "Something went wrong. Please try again.",
+            });
+            setIsSubmitting(false);
         });
-        setIsSubmitting(false);
-    }, 1500);
 };
 
     return (
