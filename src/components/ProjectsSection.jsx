@@ -1,110 +1,54 @@
-import { ArrowRight, Github } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { caseStudies } from "../data/siteContent";
+import { SectionHeading } from "./SectionHeading";
 
-const projects = [
-    {
-        id:1,
-        title: "Blogify",
-        description: "Blogify is a modern blogging platform with user authentication, rich-text editing, and personalized dashboards. Built for a smooth writing and reading experience.",
-        image: "projects/project1.png",
-        tags:["Typescript","React.js","Tailwind CSS","Prisma","PostgreSQL","Zod"],
-        githubUrl: "https://github.com/Shivam1817/BlogifyX",
-    },
-    {
-        id:2,
-        title: "Banking App",
-        description: "Banking App is a secure and user-friendly platform for managing accounts, transferring funds, and tracking transactions in real time.",
-        image: "projects/project2.png",
-        tags:["Nextjs","Typescript","Appwrite","Tailwind","ShadCN","Dwolla","Plaid"],
-        githubUrl: "https://github.com/Shivam1817/Banking-App",
-    },
+export const ProjectsSection = () => {
+  return (
+    <section id="projects" className="section-shell section-shell--muted">
+      <div className="container">
+        <SectionHeading
+          eyebrow="Case Studies"
+          title="Selected builds with product intent and technical rigor."
+          description="Each project is scoped as a real product challenge: identify friction, architect cleanly, and ship measurable user-facing outcomes."
+        />
 
-    {
-        id:3,
-        title: "Chatify",
-        description: "Chatify is a real-time chat application with instant messaging, user authentication, and a clean, responsive UI for seamless communication.",
-        image: "projects/project3.png",
-        tags:["HTML","CSS","JavaScript","express","MongoDB","Socket.IO"],
-        githubUrl: "https://github.com/Shivam1817/Real_Time_Chat",
-    },
-
-    {
-        id:4,
-        title: "File Compressor ",
-        description: "File Compressor is a simple and efficient tool that reduces file sizes while maintaining quality, making storage and sharing faster and easier.",
-        image: "projects/project4.png",
-        tags:["c++"],
-        githubUrl: "https://github.com/Shivam1817/File-Compressor",
-    },
-    ];
-
-    export const ProjectsSection = () => {
-    return (
-        <section id="projects" className="py-24 px-4 relative">
-        <div className="container mx-auto max-w-5xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-            {" "}
-            Featured <span className="text-primary">Projects</span>
-            </h2>
-
-            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Explore a selection of my recent projects, 
-            each thoughtfully engineered with a focus on clean architecture, 
-            optimal performance, and seamless user experience.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, key) => (
-                <div
-                key={key}
-                className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
-                >
-                <div className="h-48 overflow-hidden">
-                    <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
+        <div className="case-study-list">
+          {caseStudies.map((project) => (
+            <article key={project.name} className="case-study-card reveal-up">
+              <div className="case-study-head">
+                <div>
+                  <p className="case-type">{project.type}</p>
+                  <h3>{project.name}</h3>
                 </div>
+                <a href={project.link} target="_blank" rel="noreferrer" className="inline-link">
+                  View source <ArrowUpRight size={15} />
+                </a>
+              </div>
 
-                <div className="p-6">
-                    <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag)=>(
-                        <span className="px-2 py-1 text-xs font-medium border rounded-full bg-primary/20 text-secondary-foreground">
-                        {tag}
-                        </span>
-                    ))}
-                    </div>
-                    <h3 className="text-xl font-semibold mb-1">
-                    {project.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-4">
-                    {project.description}
-                    </p>
-                    <div className="flex justify-between items-center">
-                    <div className="flex space-x-3">
-                    <a 
-                        href={project.githubUrl}
-                        target="_blank"
-                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                        <Github size={20} />
-                    </a>
-                    </div>
+              <div className="case-content">
+                <div>
+                  <h4>Problem</h4>
+                  <p>{project.problem}</p>
                 </div>
+                <div>
+                  <h4>What I built</h4>
+                  <p>{project.built}</p>
                 </div>
-            </div>
-            ))}
-            </div>
-            <div>
-            <a
-            className="cosmic-button w-fit flex items-center mx-auto gap-2"
-            target="_blank"
-            href="https://github.com/shivam1817"
-            >
-                Check My Github <ArrowRight size={16} />
-            </a>
-            </div>
+                <div>
+                  <h4>Impact</h4>
+                  <p>{project.impact}</p>
+                </div>
+              </div>
+
+              <ul className="stack-row">
+                {project.stack.map((tech) => (
+                  <li key={tech}>{tech}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
-        </section>
-    );
+      </div>
+    </section>
+  );
 };
