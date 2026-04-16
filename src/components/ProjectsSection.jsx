@@ -4,14 +4,14 @@ import { SectionHeading } from "./SectionHeading";
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="section-shell section-shell--muted">
+    <section id="projects" className="section-shell section-shell--muted projects-shell">
       <div className="container project-layout">
         <aside className="project-rail reveal-up">
           <p className="eyebrow">Selected Work</p>
-          <h3>Product stories with technical edge.</h3>
+          <h3>Case studies with product stakes and technical depth.</h3>
           <p>
-            Real projects, real constraints, and clear product decisions. This is where shipping velocity
-            meets engineering depth.
+            I do not ship portfolio toys. I ship systems meant to be used, iterated, and trusted under real
+            constraints.
           </p>
           <a className="inline-link" href="https://github.com/Shivam1817" target="_blank" rel="noreferrer">
             Explore GitHub <ArrowUpRight size={14} />
@@ -20,13 +20,18 @@ export const ProjectsSection = () => {
 
         <div className="case-study-list">
           <SectionHeading
-            eyebrow="Case Studies"
-            title="Built for outcomes, not portfolio decoration."
-            description="Each project below captures product context, role, technical interest, and why it matters."
+            eyebrow="Product Engineering"
+            title="Designed to perform. Built to evolve."
+            description="Each story captures context, execution role, technical decisions, and product relevance."
           />
 
-          {highlightedCaseStudies.map((project) => (
-            <article key={project.name} id={project.anchor} className="case-study-card reveal-up">
+          {highlightedCaseStudies.map((project, index) => (
+            <article
+              key={project.name}
+              id={project.anchor}
+              className="case-study-card reveal-up"
+              style={{ animationDelay: `${index * 90}ms` }}
+            >
               <div className="case-study-head">
                 <div>
                   <p className="case-type">{project.type}</p>

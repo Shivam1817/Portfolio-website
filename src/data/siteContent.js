@@ -8,15 +8,24 @@ export const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
+export const heroKeywords = ["systems", "products", "interfaces", "infrastructure", "experiments"];
+
+export const statusSignals = [
+  "CURRENT FOCUS: ZELTHA",
+  "ACTIVE BUILD: ARTVEOX",
+  "MODE: SHIP → LEARN → ITERATE",
+  "STACK: NEXT.js / FASTAPI / TYPESCRIPT",
+];
+
 export const operatingNow = [
-  "Building Zeltha as a serious founder bet",
-  "Shipping ArtveoX creator workflows (freelance)",
-  "Designing premium frontend systems with product intent",
-  "Working across React / Next.js / Node.js / FastAPI stacks",
+  "Turning startup ideas into production software with founder urgency.",
+  "Designing creator workflows in ArtveoX for faster output velocity.",
+  "Building frontend systems that feel premium under real product constraints.",
+  "Shipping across React, Next.js, Node.js, and FastAPI stacks.",
 ];
 
 export const heroMetadata = [
-  "Operator Mode 2.0",
+  "Operator Mode Elite",
   "Founder-led execution",
   "Frontend precision, full-stack ownership",
   "Shipping velocity > performative complexity",
@@ -61,11 +70,11 @@ export const experienceItems = [
     role: "Full Stack Engineer Intern",
     period: "2024",
     summary:
-      "Built secure document collaboration features across frontend and backend systems.",
+      "Built secure document collaboration systems that balanced product utility, compliance, and performance.",
     highlights: [
       "Enabled preview support for 150+ file types and real-time collaboration workflows.",
       "Implemented comments, annotation workflows, digital signatures, and RBAC controls.",
-      "Worked with React, TypeScript, Python FastAPI, Dockerized backend services, and CI/CD-driven review flows.",
+      "Worked with React, TypeScript, Python FastAPI, Dockerized backend services, and CI/CD review flows.",
     ],
   },
   {
@@ -77,7 +86,7 @@ export const experienceItems = [
     highlights: [
       "Optimized SSR and frontend performance for faster user-facing experiences.",
       "Implemented and hardened JWT-based auth flows.",
-      "Collaborated on feature delivery, reviews, and production-minded iteration.",
+      "Collaborated on feature delivery, code reviews, and production-minded iteration.",
     ],
   },
   {

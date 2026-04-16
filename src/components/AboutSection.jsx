@@ -9,18 +9,18 @@ export const AboutSection = () => {
         <div>
           <SectionHeading
             eyebrow="Builder Philosophy"
-            title="I optimize for momentum, clarity, and product-grade execution."
-            description="I think like a founder, build like a product engineer, and care deeply about how systems feel in real hands — not just in screenshots."
+            title="I care about momentum as much as I care about quality."
+            description="I operate where product thinking meets execution: define the problem, design the experience, ship the system, and iterate from real signal."
           />
 
           <div className="operator-strip">
             <span>Operating now</span>
-            <PretextBlock lines={operatingNow.slice(0, 2)} className="operator-lines" />
+            <PretextBlock lines={operatingNow.slice(0, 3)} className="operator-lines" />
           </div>
         </div>
 
         <aside className="achievement-panel reveal-up">
-          <h3>Signal, not noise</h3>
+          <h3>Credibility surface</h3>
           <ul>
             {achievements.map((item) => (
               <li key={item}>{item}</li>
