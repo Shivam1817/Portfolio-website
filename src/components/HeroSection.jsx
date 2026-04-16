@@ -1,33 +1,54 @@
-import { ArrowDown } from "lucide-react"
-import  shivamAvatar  from "../assets/shivam.jpg"
+import { ArrowRight, TerminalSquare } from "lucide-react";
+import { PretextBlock } from "./PretextBlock";
 
-export const HeroSection = () => {
-    return <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-4">
-        <div className="container max-w-4xl mx-auto text-center z-10">
-            <div className="space-y-6 flex flex-col items-center justify-center">
-                <img src={shivamAvatar} alt="Shivam's Avatar" className="w-36 h-36 md:w-48 md:h-48 rounded-full object-cover border-4 border-white shadow-lg" />
-                <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-                    <span className="opacity-0 animate-fade-in">Hi, I'm</span>
-                    <span className="text-primary opacity-0 animate-fade-in-delay-1">{" "}Shivam</span>
-                </h1>
-
-                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                    A Full-stack Developer and recent graduate from IIT Guwahati. I specialize in building modern, responsive web applications using the MERN stack and Next.js, with a focus on real-time features and user-friendly design.
-                </p>
-
-                <div className="pt-4 opacity-0 animate-fasde-in-delay-4">
-                    <a href="#projects" className="cosmic-button">
-                        View My Work
-                    </a>
-                </div>
-            </div>
+export const HeroSection = ({ onOpenPalette }) => {
+  return (
+    <section id="hero" className="hero-section section-shell">
+      <div className="container hero-grid">
+        <div className="hero-copy reveal-up">
+          <p className="eyebrow">Developer • Founder • Freelance Product Partner</p>
+          <h1 className="hero-title">
+            <PretextBlock
+              lines={["I design systems.", "I ship products.", "I build with intent."]}
+            />
+          </h1>
+          <p className="hero-subtitle">
+            I build products, not just apps — from startup bets to production software with clear UX,
+            robust engineering, and fast iteration loops.
+          </p>
+          <div className="hero-actions">
+            <a className="button button--primary" href="#projects">
+              Explore Case Studies <ArrowRight size={16} />
+            </a>
+            <button type="button" className="button button--ghost" onClick={onOpenPalette}>
+              <TerminalSquare size={16} /> Open Command Palette
+            </button>
+          </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-            <span className="text-sm text-muted-foreground mb-2">
-                Scroll
-            </span>
-            <ArrowDown className="h-5 w-5 text-primary"/>
+        <div className="terminal-card reveal-up">
+          <div className="terminal-header">
+            <span className="dot" />
+            <span className="dot" />
+            <span className="dot" />
+            <p>operator.log</p>
+          </div>
+          <div className="terminal-body">
+            <p>
+              <span className="prompt">$</span> identity --who
+            </p>
+            <p className="output">Shivam // Full-stack engineer with frontend precision.</p>
+            <p>
+              <span className="prompt">$</span> now --building
+            </p>
+            <p className="output">Zeltha · MyEmozion · high-performance client products</p>
+            <p>
+              <span className="prompt">$</span> mode --execution
+            </p>
+            <p className="output">Ship fast. Learn quickly. Raise the quality bar each sprint.</p>
+          </div>
         </div>
+      </div>
     </section>
-}
+  );
+};

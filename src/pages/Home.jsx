@@ -1,33 +1,46 @@
-import { Navbar } from "../components/Navbar"
-import { StarBackground } from "../components/StarBackground"
-import { ThemeToggle } from "../components/ThemeToggle"
-import { HeroSection } from "../components/HeroSection"
-import { AboutSection } from "../components/AboutSection"
-import { SkillsSection } from "../components/SkillsSection"
-import { ProjectsSection } from "../components/ProjectsSection"
-import { ContactSection } from "../components/ContactSection"
-import { Footer } from "../components/Footer"
+import { useEffect, useState } from "react";
+import { Navbar } from "../components/Navbar";
+import { HeroSection } from "../components/HeroSection";
+import { AboutSection } from "../components/AboutSection";
+import { ExperienceSection } from "../components/ExperienceSection";
+import { StartupSection } from "../components/StartupSection";
+import { ProjectsSection } from "../components/ProjectsSection";
+import { ShippingSection } from "../components/ShippingSection";
+import { FreelanceSection } from "../components/FreelanceSection";
+import { ContactSection } from "../components/ContactSection";
+import { Footer } from "../components/Footer";
+import { CommandPalette } from "../components/CommandPalette";
 
 export const Home = () => {
-    return <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-        
-        {/* Theme Toggle */}
-        
-        <ThemeToggle />
-        {/* Background Effects  */}
-        <StarBackground />
+  const [paletteOpen, setPaletteOpen] = useState(false);
 
-        {/* Navbar  */}
-        <Navbar/>
-        {/* Main Content */}
-        <main>
-            <HeroSection />
-            <AboutSection />
-            <SkillsSection />
-            <ProjectsSection />
-            <ContactSection />
-        </main>
-        {/* Footer */}
-        <Footer />
+  useEffect(() => {
+    const handler = (event) => {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        setPaletteOpen((prev) => !prev);
+      }
+    };
+
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
+
+  return (
+    <div className="app-shell">
+      <Navbar onOpenPalette={() => setPaletteOpen(true)} />
+      <main>
+        <HeroSection onOpenPalette={() => setPaletteOpen(true)} />
+        <AboutSection />
+        <ExperienceSection />
+        <StartupSection />
+        <ProjectsSection />
+        <ShippingSection />
+        <FreelanceSection />
+        <ContactSection />
+      </main>
+      <Footer />
+      <CommandPalette open={paletteOpen} onClose={() => setPaletteOpen(false)} />
     </div>
-}
+  );
+};
