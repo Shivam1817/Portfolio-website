@@ -1,41 +1,45 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Rocket } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 
 export const StartupSection = () => {
   return (
     <section id="startup" className="section-shell">
-      <div className="container">
-        <SectionHeading
-          eyebrow="Startup Spotlight"
-          title="Zeltha — founder-led, product-obsessed, execution-first."
-          description="Zeltha is where I push startup velocity with engineering depth: define the thesis, design the product, ship the system, and iterate from real user behavior."
-        />
+      <div className="container startup-layout">
+        <div>
+          <SectionHeading
+            eyebrow="Founder Bet"
+            title="Zeltha is not a side project. It is a conviction build."
+            description="I am building Zeltha with founder urgency: shaping the thesis, shipping product loops, and compounding technical leverage sprint after sprint."
+          />
+          <a className="button button--primary magnetic" href="#contact">
+            <Rocket size={16} /> Build with me on Zeltha
+          </a>
+        </div>
 
         <article className="startup-panel reveal-up">
           <div>
             <p className="startup-tag">Founder Build Mode</p>
-            <h3>From concept to compounding product advantage.</h3>
+            <h3>Execution stack: product direction + system design + shipping cadence.</h3>
             <p>
-              I treat Zeltha like a living system: rapid product loops, clean architecture decisions,
-              and relentless clarity on what creates user value. It is not just a side project — it is
-              a startup engine.
+              Zeltha is where I practice long-range product thinking with short iteration cycles — balancing
+              quality, momentum, and clear user value.
             </p>
-            <a className="inline-link" href="#contact">
-              Discuss Zeltha and collaboration <ArrowUpRight size={15} />
+            <a className="inline-link" href="#shipping">
+              See execution signals <ArrowUpRight size={15} />
             </a>
           </div>
           <div className="startup-metrics">
             <div>
-              <p>Execution</p>
-              <strong>Founder + Engineer</strong>
+              <p>Cadence</p>
+              <strong>Weekly shipping loops</strong>
             </div>
             <div>
-              <p>Operating style</p>
-              <strong>Weekly shipping cadence</strong>
+              <p>Ownership</p>
+              <strong>Founder + Product + Engineering</strong>
             </div>
             <div>
               <p>Focus</p>
-              <strong>Product + Growth + System Quality</strong>
+              <strong>Utility, clarity, and compounding product quality</strong>
             </div>
           </div>
         </article>

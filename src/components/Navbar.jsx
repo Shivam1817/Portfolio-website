@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { navItems } from "../data/siteContent";
 
-export const Navbar = ({ onOpenPalette }) => {
+export const Navbar = ({ onOpenPalette, activeSection }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -23,7 +23,7 @@ export const Navbar = ({ onOpenPalette }) => {
 
         <div className="nav-links">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href}>
+            <a key={item.href} href={item.href} className={activeSection === item.href.slice(1) ? "is-active" : ""}>
               {item.label}
             </a>
           ))}

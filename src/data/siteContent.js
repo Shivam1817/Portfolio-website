@@ -1,24 +1,83 @@
 export const navItems = [
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
+  { label: "Work", href: "#projects" },
   { label: "Zeltha", href: "#startup" },
-  { label: "Projects", href: "#projects" },
+  { label: "ArtveoX", href: "#artveox" },
+  { label: "Experience", href: "#experience" },
   { label: "Shipping", href: "#shipping" },
-  { label: "Freelance", href: "#freelance" },
   { label: "Contact", href: "#contact" },
+];
+
+export const operatingNow = [
+  "Building Zeltha as a serious founder bet",
+  "Shipping ArtveoX creator workflows (freelance)",
+  "Designing premium frontend systems with product intent",
+  "Working across React / Next.js / Node.js / FastAPI stacks",
+];
+
+export const heroMetadata = [
+  "Operator Mode 2.0",
+  "Founder-led execution",
+  "Frontend precision, full-stack ownership",
+  "Shipping velocity > performative complexity",
+];
+
+export const highlightedCaseStudies = [
+  {
+    name: "Banking App",
+    type: "Financial workflow platform",
+    anchor: "banking-app",
+    problem:
+      "Modern finance products must combine trust, account linking, and transaction clarity without adding UX friction.",
+    built:
+      "Implemented secure authentication, account linking, transfer workflows, and clean real-time transaction surfaces.",
+    role: "Full-stack build from workflow design to implementation and quality refinement.",
+    impact:
+      "Delivered a robust finance user experience with strong trust signaling and clear execution quality.",
+    stack: ["Next.js", "TypeScript", "Plaid", "Dwolla", "Appwrite", "ShadCN"],
+    link: "https://github.com/Shivam1817/Banking-App",
+    repo: "Public repository",
+  },
+  {
+    name: "BlogifyX",
+    type: "Creator platform",
+    anchor: "blogifyx",
+    problem:
+      "Writers and creators need a publishing environment that feels modern, quick, and extensible.",
+    built:
+      "Created a writing-focused product with auth, rich publishing flows, and personalized dashboarding.",
+    role: "Product engineering from schema and backend integration to frontend UX refinement.",
+    impact:
+      "Shipped a cleaner publishing workflow while keeping the system extensible for growth.",
+    stack: ["React", "TypeScript", "Prisma", "PostgreSQL", "Tailwind"],
+    link: "https://github.com/Shivam1817/BlogifyX",
+    repo: "Public repository",
+  },
 ];
 
 export const experienceItems = [
   {
-    org: "CloudGrep",
-    role: "Full-Stack Engineer Intern",
+    org: "Aiverbalyze Technologies",
+    role: "Full Stack Engineer Intern",
     period: "2024",
     summary:
-      "Built and optimized features for a Firecracker VM orchestration platform using Next.js, Go, and MongoDB.",
+      "Built secure document collaboration features across frontend and backend systems.",
     highlights: [
-      "Improved deployment and feature delivery speed across internal workflows.",
-      "Worked across frontend product surfaces and backend service logic.",
-      "Collaborated with engineers shipping infra-heavy product experiences.",
+      "Enabled preview support for 150+ file types and real-time collaboration workflows.",
+      "Implemented comments, annotation workflows, digital signatures, and RBAC controls.",
+      "Worked with React, TypeScript, Python FastAPI, Dockerized backend services, and CI/CD-driven review flows.",
+    ],
+  },
+  {
+    org: "CloudGrep",
+    role: "Software Development Engineer Intern",
+    period: "2024",
+    summary:
+      "Improved product performance and delivery quality in a Next.js + Node.js + MongoDB stack.",
+    highlights: [
+      "Optimized SSR and frontend performance for faster user-facing experiences.",
+      "Implemented and hardened JWT-based auth flows.",
+      "Collaborated on feature delivery, reviews, and production-minded iteration.",
     ],
   },
   {
@@ -26,78 +85,51 @@ export const experienceItems = [
     role: "Founder / Product Engineer",
     period: "Current",
     summary:
-      "Leading product direction, engineering, and execution strategy for a startup-grade platform.",
+      "Leading startup execution across product strategy, system design, and full-stack delivery.",
     highlights: [
-      "Own product strategy, user experience, and technical architecture.",
-      "Ship fast iterations with a full-stack ownership model.",
-      "Building with founder urgency and long-term system thinking.",
-    ],
-  },
-  {
-    org: "Independent Collaborations",
-    role: "Product Engineer",
-    period: "Ongoing",
-    summary:
-      "Worked with multiple teams and organizations to launch features, MVPs, and full products.",
-    highlights: [
-      "Convert vague ideas into shipped product slices quickly.",
-      "Balance engineering quality with aggressive timelines.",
-      "Design and implement frontend systems that feel premium and fast.",
+      "Owning product vision, UX direction, and engineering roadmap.",
+      "Shipping in rapid loops while preserving architecture quality.",
+      "Building with founder urgency and long-term product conviction.",
     ],
   },
 ];
 
-export const caseStudies = [
-  {
-    name: "MyEmozion",
-    type: "Flagship product",
-    problem:
-      "People struggle to track emotional state consistently and translate reflection into better decisions.",
-    built:
-      "Built a focused product experience for emotional check-ins, journaling, and personal insight loops with a calm, responsive interface.",
-    impact:
-      "Created a foundation for repeat engagement and behavior-oriented reflection workflows.",
-    stack: ["Next.js", "TypeScript", "Tailwind", "Node.js", "MongoDB"],
-    link: "https://github.com/Shivam1817",
-  },
-  {
-    name: "Banking App",
-    type: "Financial workflow platform",
-    problem:
-      "Modern money products need secure linking, intuitive flows, and instant transaction visibility.",
-    built:
-      "Implemented authentication, account linking, transfer workflows, and real-time transaction handling.",
-    impact:
-      "Delivered a polished finance UX that balances clarity, speed, and trust.",
-    stack: ["Next.js", "TypeScript", "Plaid", "Dwolla", "Appwrite", "ShadCN"],
-    link: "https://github.com/Shivam1817/Banking-App",
-  },
-  {
-    name: "BlogifyX",
-    type: "Creator platform",
-    problem:
-      "Most personal publishing tools either feel bloated or too limited for serious creators.",
-    built:
-      "Built a writing-focused platform with auth, rich content workflows, and personalized dashboarding.",
-    impact:
-      "Improved publishing flow quality while keeping the UI lightweight and developer-extensible.",
-    stack: ["React", "TypeScript", "Prisma", "PostgreSQL", "Tailwind"],
-    link: "https://github.com/Shivam1817/BlogifyX",
-  },
+export const achievements = [
+  "IIT Guwahati graduate",
+  "Solved 1000+ coding problems",
+  "Bronze medal in water polo",
+  "Core stack: React, Next.js, TypeScript, Node.js, FastAPI",
+  "Infra + data: Docker, Prisma, PostgreSQL, MongoDB",
 ];
 
 export const githubStats = [
-  { label: "Public Repositories", value: "34" },
-  { label: "Core Focus", value: "Full-Stack Products" },
-  { label: "Execution Style", value: "Ship, Measure, Iterate" },
-  { label: "Primary Stack", value: "React / Next / Node / TS" },
+  { label: "Public Repositories", value: "34+" },
+  { label: "Problem Solving", value: "1000+ DSA solves" },
+  { label: "Primary Loop", value: "Build → Test → Ship" },
+  { label: "Role Fit", value: "Founder / Product Engineer" },
+];
+
+export const buildLogs = [
+  {
+    title: "System-first frontend",
+    detail: "Designing component systems that feel premium while remaining production-friendly.",
+  },
+  {
+    title: "AI creator tooling",
+    detail: "Shaping creator-focused generation workflows for ArtveoX in an ongoing freelance engagement.",
+  },
+  {
+    title: "Startup execution",
+    detail: "Driving Zeltha with founder velocity across product, engineering, and iteration strategy.",
+  },
 ];
 
 export const commandItems = [
-  { label: "Jump: About", href: "#about", shortcut: "1" },
-  { label: "Jump: Zeltha", href: "#startup", shortcut: "2" },
-  { label: "Jump: Projects", href: "#projects", shortcut: "3" },
-  { label: "Jump: Contact", href: "#contact", shortcut: "4" },
+  { label: "Jump: Hero", href: "#hero", shortcut: "H" },
+  { label: "Jump: Work", href: "#projects", shortcut: "W" },
+  { label: "Jump: Zeltha", href: "#startup", shortcut: "Z" },
+  { label: "Jump: ArtveoX", href: "#artveox", shortcut: "A" },
+  { label: "Jump: Contact", href: "#contact", shortcut: "C" },
   { label: "Open GitHub", href: "https://github.com/Shivam1817", shortcut: "G" },
   { label: "Open Upwork", href: "https://www.upwork.com/freelancers/~013b125c7396dc3ed2", shortcut: "U" },
 ];

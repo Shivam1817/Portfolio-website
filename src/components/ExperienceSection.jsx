@@ -6,14 +6,14 @@ export const ExperienceSection = () => {
     <section id="experience" className="section-shell section-shell--muted">
       <div className="container">
         <SectionHeading
-          eyebrow="Companies / Collaborations"
-          title="Built across startups, teams, and product environments."
-          description="From infra-heavy intern roles to founder-led execution, I have worked across multiple contexts and shipped with urgency."
+          eyebrow="Experience / Collaborations"
+          title="Built across startups, products, and engineering teams."
+          description="Breadth with execution depth: I have shipped across multiple organizations while maintaining product quality and technical discipline."
         />
 
         <div className="timeline">
-          {experienceItems.map((item) => (
-            <article key={item.org} className="timeline-card reveal-up">
+          {experienceItems.map((item, index) => (
+            <article key={item.org} className="timeline-card reveal-up" style={{ animationDelay: `${index * 80}ms` }}>
               <div className="timeline-head">
                 <h3>{item.org}</h3>
                 <span>{item.period}</span>
