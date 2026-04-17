@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Sparkles, TerminalSquare } from "lucide-react";
-import { heroKeywords, heroMetadata, statusSignals } from "../data/siteContent";
+import portrait from "../assets/shivam.jpg";
+import { heroKeywords, heroMetadata, heroStats, heroSystemCards, statusSignals } from "../data/siteContent";
 import { PretextBlock } from "./PretextBlock";
 
 export const HeroSection = ({ onOpenPalette }) => {
@@ -35,14 +36,25 @@ export const HeroSection = ({ onOpenPalette }) => {
 
         <div className="hero-grid">
           <div className="hero-copy reveal-up">
-            <p className="eyebrow">Operator / Builder / Founder</p>
+            <p className="eyebrow">Builder / Founder / Product Engineer</p>
+            <p className="hero-kicker">Not another safe landing page. This is the active build console.</p>
             <h1 className="hero-title">
-              <PretextBlock lines={["I build", "real", heroKeywords[activeKeyword]]} />
+              <span className="hero-title-lead">I build</span>
+              <PretextBlock lines={["products with", "founder energy", heroKeywords[activeKeyword]]} />
             </h1>
             <p className="hero-subtitle">
-              Shipping ideas into real products — from interface to infrastructure. I design and build
-              systems with startup speed, technical depth, and product-level polish.
+              I turn rough ideas into software with product taste, technical depth, and a bias toward visible
+              progress. From founder bets to freelance systems, I like code that ships and interfaces that hit.
             </p>
+
+            <div className="hero-proof-grid">
+              {heroStats.map((item) => (
+                <div key={item.label} className="hero-proof-card">
+                  <span className="hero-proof-value">{item.value}</span>
+                  <span className="hero-proof-label">{item.label}</span>
+                </div>
+              ))}
+            </div>
 
             <div className="meta-rotator" aria-live="polite">
               <Sparkles size={14} />
@@ -59,27 +71,57 @@ export const HeroSection = ({ onOpenPalette }) => {
             </div>
           </div>
 
-          <div className="terminal-card reveal-up terminal-card--hero">
-            <div className="terminal-header">
-              <span className="dot" />
-              <span className="dot" />
-              <span className="dot" />
-              <p>operator-status.live</p>
+          <div className="hero-stage reveal-up">
+            <div className="hero-stage-orbit" aria-hidden="true">
+              <span className="orbit-ring orbit-ring--one" />
+              <span className="orbit-ring orbit-ring--two" />
+              <span className="orbit-ring orbit-ring--three" />
             </div>
-            <div className="terminal-body">
-              <p>
-                <span className="prompt">$</span> focus --current
-              </p>
-              <p className="output">Zeltha + ArtveoX + high-value freelance product delivery</p>
-              <p>
-                <span className="prompt">$</span> strength --stack
-              </p>
-              <p className="output">React · Next.js · TypeScript · Node.js · FastAPI · Docker</p>
-              <p>
-                <span className="prompt">$</span> status --momentum
-              </p>
-              <p className="output">Build quickly, harden quality, repeat.</p>
+
+            <article className="hero-portrait-card">
+              <div className="hero-portrait-frame">
+                <img src={portrait} alt="Shivam standing outdoors" />
+              </div>
+              <div className="hero-portrait-caption">
+                <div>
+                  <p className="hero-card-label">Operator Feed</p>
+                  <strong>Building with product taste, not just code volume.</strong>
+                </div>
+                <span className="case-type">Live</span>
+              </div>
+            </article>
+
+            <div className="hero-code-card terminal-card">
+              <div className="terminal-header">
+                <span className="dot" />
+                <span className="dot" />
+                <span className="dot" />
+                <p>mission-control.sh</p>
+              </div>
+              <div className="terminal-body">
+                <p>
+                  <span className="prompt">$</span> focus --current
+                </p>
+                <p className="output">Zeltha + ArtveoX + high-value freelance product delivery</p>
+                <p>
+                  <span className="prompt">$</span> strength --stack
+                </p>
+                <p className="output">React · Next.js · TypeScript · Node.js · FastAPI · Docker</p>
+                <p>
+                  <span className="prompt">$</span> status --momentum
+                </p>
+                <p className="output">Build quickly, harden quality, repeat.</p>
+              </div>
             </div>
+
+            <article className="hero-signal-card">
+              {heroSystemCards.map((card) => (
+                <div key={card.label} className="hero-signal-row">
+                  <span>{card.label}</span>
+                  <strong>{card.value}</strong>
+                </div>
+              ))}
+            </article>
           </div>
         </div>
       </div>

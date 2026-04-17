@@ -20,12 +20,15 @@ export const AboutSection = () => {
         </div>
 
         <aside className="achievement-panel reveal-up">
-          <h3>Credibility surface</h3>
-          <ul>
+          <p className="case-type">Credibility Surface</p>
+          <h3>Signal that backs the aesthetic.</h3>
+          <div className="achievement-grid">
             {achievements.map((item) => (
-              <li key={item}>{item}</li>
+              <span key={item} className="achievement-chip">
+                {item}
+              </span>
             ))}
-          </ul>
+          </div>
         </aside>
       </div>
     </section>

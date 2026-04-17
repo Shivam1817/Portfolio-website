@@ -18,7 +18,10 @@ export const Navbar = ({ onOpenPalette, activeSection }) => {
       <div className="container nav-inner">
         <a className="brand" href="#hero">
           <span className="brand-mark">S</span>
-          <span>Shivam / Operator</span>
+          <span className="brand-copy">
+            <strong>Shivam.exe</strong>
+            <small>build / ship / repeat</small>
+          </span>
         </a>
 
         <div className="nav-links">
@@ -31,7 +34,7 @@ export const Navbar = ({ onOpenPalette, activeSection }) => {
 
         <button type="button" className="command-pill" onClick={onOpenPalette}>
           <span>⌘K</span>
-          <span>Commands</span>
+          <span>Control Panel</span>
         </button>
 
         <button
@@ -58,7 +61,7 @@ export const Navbar = ({ onOpenPalette, activeSection }) => {
               }}
             >
               <span>⌘K</span>
-              <span>Commands</span>
+              <span>Control Panel</span>
             </button>
           </div>
         ) : null}

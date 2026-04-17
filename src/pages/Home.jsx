@@ -12,6 +12,7 @@ import { Footer } from "../components/Footer";
 import { CommandPalette } from "../components/CommandPalette";
 import { BuildLogsSection } from "../components/BuildLogsSection";
 import { ArtveoxSection } from "../components/ArtveoxSection";
+import { SignalMeshBackground } from "../components/SignalMeshBackground";
 
 const MAGNETIC_SELECTOR = ".magnetic";
 
@@ -105,6 +106,7 @@ export const Home = () => {
 
   return (
     <div className="app-shell">
+      <SignalMeshBackground />
       <div className="noise-layer" aria-hidden="true" />
       <div className="grid-layer" aria-hidden="true" />
       <div className="cursor-glow" aria-hidden="true" />
