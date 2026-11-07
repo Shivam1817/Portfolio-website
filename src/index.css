@@ -349,16 +349,14 @@ textarea {
 
 .hero-title {
   margin: 0;
-  display: grid;
-  gap: 0.35rem;
-  font-size: clamp(3.2rem, 8vw, 7.1rem);
-  line-height: 0.88;
+  font-size: clamp(3.2rem, 7.4vw, 6.3rem);
+  line-height: 0.95;
   letter-spacing: -0.065em;
 }
 
-.hero-title-lead {
+.hero-title span {
   display: block;
-  color: var(--text);
+  color: var(--accent);
 }
 
 .pretext-block {
@@ -496,7 +494,6 @@ textarea {
 
 .hero-stage {
   position: relative;
-  min-height: 640px;
   display: grid;
   place-items: center;
   isolation: isolate;
@@ -594,10 +591,9 @@ textarea {
 }
 
 .hero-portrait-card {
-  width: min(440px, 82%);
+  width: min(350px, 90%);
   padding: 1rem;
-  margin-left: auto;
-  transform: rotate(-6deg) translateY(-0.5rem);
+  transform: rotate(-3deg);
 }
 
 .hero-portrait-frame {
@@ -1063,6 +1059,17 @@ textarea {
   color: var(--text-soft);
 }
 
+.artveox-workflow {
+  margin: 0.8rem 0;
+  padding-left: 1.4rem;
+  list-style: decimal;
+  color: var(--text-soft);
+}
+
+.artveox-workflow li + li {
+  margin-top: 0.5rem;
+}
+
 .artveox-stack {
   margin-top: 1rem;
   display: flex;
@@ -1497,10 +1504,6 @@ kbd {
     position: static;
   }
 
-  .hero-stage {
-    min-height: 720px;
-  }
-
   .hero-proof-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1530,12 +1533,8 @@ kbd {
     grid-template-columns: 1fr;
   }
 
-  .hero-stage {
-    min-height: 640px;
-  }
-
   .hero-portrait-card {
-    width: min(420px, 92%);
+    width: min(320px, 92%);
     margin-inline: auto;
     transform: rotate(-3deg);
   }
@@ -1572,6 +1571,10 @@ kbd {
     padding: 4.3rem 0;
   }
 
+  .hero-section {
+    padding-top: 7rem;
+  }
+
   .section-shell--muted::before {
     inset: 0.6rem 0;
   }
@@ -1586,10 +1589,6 @@ kbd {
 
   .hero-proof-grid {
     grid-template-columns: 1fr;
-  }
-
-  .hero-stage {
-    min-height: 580px;
   }
 
   .hero-signal-card {
@@ -1608,7 +1607,7 @@ kbd {
   }
 
   .hero-portrait-card {
-    width: 100%;
+    width: min(280px, 100%);
     transform: none;
   }
 

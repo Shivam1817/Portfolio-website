@@ -1,4 +1,4 @@
-import { ArrowUpRight, Lock } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 
 export const ArtveoxSection = () => {
@@ -6,68 +6,49 @@ export const ArtveoxSection = () => {
     <section id="artveox" className="section-shell section-shell--muted artveox-shell">
       <div className="container">
         <SectionHeading
-          eyebrow="Flagship Freelance Product"
-          title="ArtveoX — AI-powered creator platform for video, image, and music workflows."
-          description="Ongoing freelance build focused on giving content creators a more unified path from idea to production-ready output."
+          eyebrow="Featured client work"
+          title="Artveox"
+          description="An AI media app I built and launched for a freelance client."
         />
 
         <article className="case-study-card artveox-panel reveal-up">
           <div>
             <div className="case-study-head">
               <div>
-                <p className="case-type">Ongoing freelance engagement</p>
-                <h3>ArtveoX</h3>
+                <p className="case-type">My role</p>
+                <h3>Full-stack implementation</h3>
               </div>
-              <a className="inline-link" href="https://artveox.vercel.app/" target="_blank" rel="noreferrer">
-                Visit live product <ArrowUpRight size={15} />
+              <a className="inline-link" href="https://artveox.ai/" target="_blank" rel="noreferrer">
+                Visit the live product <ArrowUpRight size={15} />
               </a>
             </div>
 
             <div className="case-content">
               <div>
-                <h4>What it is</h4>
-                <p>
-                  A creator-focused AI platform that supports generation workflows across video, image, and
-                  music in a single product surface.
-                </p>
+                <h4>Web app and deployment</h4>
+                <p>Built the app with Next.js and TypeScript, deployed it on Vercel, and stored generated media in Cloudflare R2.</p>
               </div>
               <div>
-                <h4>What I&apos;m building</h4>
-                <p>
-                  Workflow shaping, frontend execution, and product-level UX quality for faster creator output
-                  without fragmented tooling.
-                </p>
+                <h4>Product integrations</h4>
+                <p>Integrated Clerk for sign-in, Supabase for data, Razorpay for payments, and Replicate, HeyGen, and Deepgram for media workflows.</p>
               </div>
               <div>
-                <h4>Why it matters</h4>
-                <p>
-                  Creators need reliable utility, not scattered tools. ArtveoX pushes toward a unified creative
-                  operating layer.
-                </p>
-              </div>
-              <div>
-                <h4>Stack surface</h4>
-                <p>Next.js, Supabase, Razorpay, Stripe, Replicate, Clerk, Cloudflare R2, Prisma/PostgreSQL.</p>
+                <h4>Video continuity</h4>
+                <p>Worked on keeping characters consistent across clips in longer videos.</p>
               </div>
             </div>
-
-            <p className="repo-note">
-              <Lock size={14} /> Private repository — implementation details intentionally constrained.
-            </p>
           </div>
 
           <div className="artveox-preview">
-            <p className="startup-tag">Stack Pressure</p>
-            <h3>Creator workflows with production-grade polish.</h3>
-            <p>
-              The work is less about adding one more AI button and more about giving creators a system they can
-              trust when speed matters.
-            </p>
+            <p className="startup-tag">Video workflow</p>
+            <h3>From 10-second clips to longer videos</h3>
+            <ol className="artveox-workflow">
+              <li>Generate short clips through media APIs.</li>
+              <li>Coordinate the clip workflow with Trigger.dev.</li>
+              <li>Join clips with FFmpeg and store the output in Cloudflare R2.</li>
+            </ol>
             <div className="artveox-stack">
-              <span>Generation flows</span>
-              <span>Billing + auth</span>
-              <span>Storage + delivery</span>
-              <span>Premium frontend</span>
+              <span>Tested with videos up to 5 minutes</span>
             </div>
           </div>
         </article>

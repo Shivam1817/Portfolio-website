@@ -3,14 +3,10 @@ import { Navbar } from "../components/Navbar";
 import { HeroSection } from "../components/HeroSection";
 import { AboutSection } from "../components/AboutSection";
 import { ExperienceSection } from "../components/ExperienceSection";
-import { StartupSection } from "../components/StartupSection";
 import { ProjectsSection } from "../components/ProjectsSection";
-import { ShippingSection } from "../components/ShippingSection";
-import { FreelanceSection } from "../components/FreelanceSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 import { CommandPalette } from "../components/CommandPalette";
-import { BuildLogsSection } from "../components/BuildLogsSection";
 import { ArtveoxSection } from "../components/ArtveoxSection";
 import { SignalMeshBackground } from "../components/SignalMeshBackground";
 
@@ -21,7 +17,7 @@ export const Home = () => {
   const [activeSection, setActiveSection] = useState("hero");
 
   const sections = useMemo(
-    () => ["hero", "about", "projects", "startup", "artveox", "experience", "shipping", "freelance", "contact"],
+    () => ["hero", "artveox", "experience", "projects", "about", "contact"],
     []
   );
 
@@ -113,15 +109,11 @@ export const Home = () => {
       <div className="scan-line" aria-hidden="true" />
       <Navbar onOpenPalette={() => setPaletteOpen(true)} activeSection={activeSection} />
       <main>
-        <HeroSection onOpenPalette={() => setPaletteOpen(true)} />
-        <AboutSection />
-        <ProjectsSection />
-        <StartupSection />
+        <HeroSection />
         <ArtveoxSection />
         <ExperienceSection />
-        <ShippingSection />
-        <BuildLogsSection />
-        <FreelanceSection />
+        <ProjectsSection />
+        <AboutSection />
         <ContactSection />
       </main>
       <Footer />

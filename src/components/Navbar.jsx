@@ -19,8 +19,8 @@ export const Navbar = ({ onOpenPalette, activeSection }) => {
         <a className="brand" href="#hero">
           <span className="brand-mark">S</span>
           <span className="brand-copy">
-            <strong>Shivam.exe</strong>
-            <small>build / ship / repeat</small>
+            <strong>Shivam</strong>
+            <small>Full-stack engineer</small>
           </span>
         </a>
 
@@ -34,13 +34,14 @@ export const Navbar = ({ onOpenPalette, activeSection }) => {
 
         <button type="button" className="command-pill" onClick={onOpenPalette}>
           <span>⌘K</span>
-          <span>Control Panel</span>
+          <span>Jump to section</span>
         </button>
 
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
           className="mobile-menu-button"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
         >
           {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -61,7 +62,7 @@ export const Navbar = ({ onOpenPalette, activeSection }) => {
               }}
             >
               <span>⌘K</span>
-              <span>Control Panel</span>
+              <span>Jump to section</span>
             </button>
           </div>
         ) : null}

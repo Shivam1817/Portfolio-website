@@ -7,19 +7,13 @@ export const ProjectsSection = () => {
     <section id="projects" className="section-shell section-shell--muted projects-shell">
       <div className="container">
         <SectionHeading
-          eyebrow="Product Engineering"
-          title="Designed to perform. Built to evolve."
-          description="Real screenshots, real systems, and clear context around what I shipped and why it mattered."
+          title="Public project"
         />
 
         <div className="project-layout">
           <aside className="project-rail reveal-up">
-            <p className="eyebrow">Selected Work</p>
-            <h3>Case studies with product stakes and technical depth.</h3>
-            <p>
-              I do not ship portfolio toys. I ship systems meant to be used, iterated, and trusted under real
-              constraints.
-            </p>
+            <h3>Code and setup guides</h3>
+            <p>See the app, API, and deployment notes in the BlogifyX repository.</p>
             <a className="inline-link" href="https://github.com/Shivam1817" target="_blank" rel="noreferrer">
               Explore GitHub <ArrowUpRight size={14} />
             </a>
@@ -67,7 +61,7 @@ export const ProjectsSection = () => {
                     <p>{project.role}</p>
                   </div>
                   <div>
-                    <h4>Why it matters</h4>
+                    <h4>Deployment</h4>
                     <p>{project.impact}</p>
                   </div>
                 </div>
